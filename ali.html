@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رسالة دكتور ياسر</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+       
+        background-image: url('C:\Users\ali\OneDrive\Desktop\حياتي\download (12).jpeg'); /* تعيين الصورة كخلفية */
+        background-size: cover;
+        background-position: center;
+    }
+    .container {
+        text-align: center;
+    }
+    img {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        border-radius: 50%; /* تحويل الصورة إلى شكل دائري */
+        overflow: hidden; /* ضمان عرض الصورة بشكل دائري */
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+    h2 {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <img src="C:\Users\ali\OneDrive\Pictures\Screenshots\Screenshot 2024-05-12 232509.png" alt="صورة" onclick="playRandomSound()">
+    <h2> اضغط على الصورة لتسمع الرسالة</h2>
+    <h2> ENG : Ali Essam </h2>
+</div>
+
+<audio id="audio">
+    <source src="sound1.mp3" type="audio/mpeg">
+    <!-- إضافة المزيد من مصادر الصوت حسب الحاجة -->
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    var audioSources = [
+        "yh-mlk-tkhdyt.mp3",
+        "qqqqqqqqqq.mp3",
+        "b-d-ny-bws-rjlk.mp3",
+        "emotional-damage-meme.mp3",
+        "khd-smbws.mp3",
+        "my-video_X9RNtah.mp3",
+        "khsh-kly-lbhym.mp3"
+    ];
+
+    function playRandomSound() {
+        var randomIndex = Math.floor(Math.random() * audioSources.length); // اختيار مسار عشوائي
+        var audio = document.getElementById("audio");
+        audio.src = audioSources[randomIndex]; // تحديث مسار الصوت
+        audio.play(); // تشغيل الصوت
+    }
+</script>
+</body>
+</html>
